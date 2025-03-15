@@ -50,7 +50,7 @@ The pipeline consists of two steps: first, the execution of `spark-job.py`, foll
 - `spark-job.py`: Reading the 3 .json files from `~/team17/data`. Completing the data manipulation task. Writing the output as .parquet format into `~/team17/spark/output`.
 - `duckdb-job.sql`: Reading the 3 .parquet file into tables. Completing the data pre-aggregation task and Creating corresponding tables in the database `~/team17/duckdb/yelp.db`. Writing the tables as .csv format into `~/team17/duckdb/db_output`.
 
-After changing the data paths to the correct ones in pipeline.sh, run the following:
+After changing the data paths to the correct ones in `pipeline.sh`, run the following:
 
 ```
 bash ~/team17/bash/pipeline.sh

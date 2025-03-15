@@ -41,12 +41,16 @@ The file structure should be:
     └── spark-job.py
 ```
 
+Note: yelp.db is currently not in the repo, and will be generated when running the pipeline.
+
 ### Run the pipeline
 
 The pipeline consists of two steps: first, the execution of `spark-job.py`, followed by the execution of `duckdb-job.sql`. It includes message outputs and rollback functions for error handling.
 
 - `spark-job.py`: Reading the 3 .json files from `~/team17/data`. Completing the data manipulation task. Writing the output as .parquet format into `~/team17/spark/output`.
 - `duckdb-job.sql`: Reading the 3 .parquet file into tables. Completing the data pre-aggregation task and Creating corresponding tables in the database `~/team17/duckdb/yelp.db`. Writing the tables as .csv format into `~/team17/duckdb/db_output`.
+
+After changing the data paths to the correct ones in pipeline.sh, run the following:
 
 ```
 bash ~/team17/bash/pipeline.sh

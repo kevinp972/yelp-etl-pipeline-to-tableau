@@ -61,7 +61,7 @@ bash ~/team17/bash/pipeline.sh
 Once the .csv files are available, download them to your local computer for loading into Tableau. To do this, create a local directory, navigate to it in the console, and run the following command:
 
 ```
-sshpass -p '405' scp anshadui@ec2-52-12-93-138.us-west-2.compute.amazonaws.com:/home/anshadui/team17/duckdb/db_output/*.csv ./
+sshpass -p '[Insert Password Here]' scp anshadui@ec2-52-12-93-138.us-west-2.compute.amazonaws.com:/home/anshadui/team17/duckdb/db_output/*.csv ./
 ```
 
 p.s. `sshpass` is a tool for automating SSH password entry in scripts, allowing password-based authentication without manual input. To install `sshpass`, run:

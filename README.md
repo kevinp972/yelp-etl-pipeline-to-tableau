@@ -31,6 +31,7 @@ The file structure should be:
 │   ├── yelp_academic_dataset_checkin.json
 │   └── yelp_academic_dataset_tip.json
 ├── duckdb
+│   ├── README.md
 │   ├── db_output
 │   ├── duckdb-job.sql
 │   └── yelp.db

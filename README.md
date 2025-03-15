@@ -17,7 +17,9 @@ Clone this repo containing our code:
 git clone https://github.com/Prof-Rosario-UCLA/team17.git
 ```
 
-The file structure should be: **ATTENTION**: The original data directory should be empty and please move the data we wget and unzip from the yelp website into the data directory.
+**ATTENTION**: The original data directory should be empty and please move the data we wget and unzip from the yelp website into the data directory.
+
+The file structure should be:
 
 ```
 .

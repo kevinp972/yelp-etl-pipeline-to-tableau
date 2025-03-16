@@ -8,7 +8,7 @@ SPARK=spark-submit
 TRANSFORMER=../spark/spark-job.py
 DATABASE=../duckdb/yelp.db
 OUTPUT=../spark/output
-QUERIES=../duckdb/duckdb-job1.sql
+QUERIES=../duckdb/duckdb-job.sql
 
 # Variables for DuckDB load.
 LOADPATH="$OUTPUT/*.parquet"

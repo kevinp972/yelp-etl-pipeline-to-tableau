@@ -54,7 +54,8 @@ The pipeline consists of two steps: first, the execution of `spark-job.py`, foll
 After changing the data paths to the correct ones in `pipeline.sh`, run the following:
 
 ```
-bash ~/team17/bash/pipeline.sh
+cd ~/team17/bash
+bash pipeline.sh
 ```
 
 ### Download the data output

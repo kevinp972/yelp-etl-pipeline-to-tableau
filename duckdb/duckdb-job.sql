@@ -5,13 +5,13 @@ DROP TABLE IF EXISTS checkin_origin;
 --
 
 CREATE TABLE business_origin AS
-SELECT * FROM read_parquet('/home/anshadui/team17/spark/output/business_df.parquet/\*.parquet');
+SELECT * FROM read_parquet('../spark/output/business_df.parquet/\*.parquet');
 
 CREATE TABLE checkin_origin AS
-SELECT * FROM read_parquet('/home/anshadui/team17/spark/output/checkin_df.parquet/\*.parquet');
+SELECT * FROM read_parquet('../spark/output/checkin_df.parquet/\*.parquet');
 
 CREATE TABLE tip_origin AS
-SELECT * FROM read_parquet('/home/anshadui/team17/spark/output/tip_df.parquet/\*.parquet');
+SELECT * FROM read_parquet('../spark/output/tip_df.parquet/\*.parquet');
 
 --
 
@@ -177,17 +177,16 @@ CREATE TABLE graph10_businessmap AS
     WHERE state NOT IN ('HI', 'AB', 'XMS');
 
 -- Export results to CSV files for visualization
-COPY graph1_business_summary TO '/home/anshadui/team17/duckdb/db_output/graph1_business_summary.csv' (FORMAT CSV, HEADER TRUE);
-COPY graph2_city_summary TO '/home/anshadui/team17/duckdb/db_output/graph2_city_summary.csv' (FORMAT CSV, HEADER TRUE);
-COPY graph2_state_summary TO '/home/anshadui/team17/duckdb/db_output/graph2_state_summary.csv' (FORMAT CSV, HEADER TRUE);
-COPY graph3_top_rated_cities TO '/home/anshadui/team17/duckdb/db_output/graph3_top_rated_cities.csv' (FORMAT CSV, HEADER TRUE);
-COPY graph4_cuisine_summary TO '/home/anshadui/team17/duckdb/db_output/graph4_cuisine_summary.csv' (FORMAT CSV, HEADER TRUE);
-COPY graph5_cuisinetip_summary TO '/home/anshadui/team17/duckdb/db_output/graph5_cuisinetip_summary.csv' (FORMAT CSV, HEADER TRUE);
-COPY graph6_checkin_aggregates_all TO '/home/anshadui/team17/duckdb/db_output/graph6_checkin_aggregates_all.csv' (FORMAT CSV, HEADER TRUE);
-COPY graph7a_checkin_num_res TO '/home/anshadui/team17/duckdb/db_output/graph7a_checkin_num_res.csv' (FORMAT CSV, HEADER TRUE);
-COPY graph7b_checkin_num_all TO '/home/anshadui/team17/duckdb/db_output/graph7b_checkin_num_all.csv' (FORMAT CSV, HEADER TRUE);
-COPY graph8_city_checkin_num TO '/home/anshadui/team17/duckdb/db_output/graph8_city_checkin_num.csv' (FORMAT CSV, HEADER TRUE);
-COPY graph9_restaurant_checkin_num TO '/home/anshadui/team17/duckdb/db_output/graph9_restaurant_checkin_num.csv' (FORMAT CSV, HEADER TRUE);
-COPY graph10_businessmap TO '/home/anshadui/team17/duckdb/db_output/graph10_businessmap.csv' (FORMAT CSV, HEADER TRUE);
-
+COPY graph1_business_summary TO '../duckdb/db_output/graph1_business_summary.csv' (FORMAT CSV, HEADER TRUE);
+COPY graph2_city_summary TO '../duckdb/db_output/graph2_city_summary.csv' (FORMAT CSV, HEADER TRUE);
+COPY graph2_state_summary TO '../duckdb/db_output/graph2_state_summary.csv' (FORMAT CSV, HEADER TRUE);
+COPY graph3_top_rated_cities TO '../duckdb/db_output/graph3_top_rated_cities.csv' (FORMAT CSV, HEADER TRUE);
+COPY graph4_cuisine_summary TO '../duckdb/db_output/graph4_cuisine_summary.csv' (FORMAT CSV, HEADER TRUE);
+COPY graph5_cuisinetip_summary TO '../duckdb/db_output/graph5_cuisinetip_summary.csv' (FORMAT CSV, HEADER TRUE);
+COPY graph6_checkin_aggregates_all TO '../duckdb/db_output/graph6_checkin_aggregates_all.csv' (FORMAT CSV, HEADER TRUE);
+COPY graph7a_checkin_num_res TO '../duckdb/db_output/graph7a_checkin_num_res.csv' (FORMAT CSV, HEADER TRUE);
+COPY graph7b_checkin_num_all TO '../duckdb/db_output/graph7b_checkin_num_all.csv' (FORMAT CSV, HEADER TRUE);
+COPY graph8_city_checkin_num TO '../duckdb/db_output/graph8_city_checkin_num.csv' (FORMAT CSV, HEADER TRUE);
+COPY graph9_restaurant_checkin_num TO '../duckdb/db_output/graph9_restaurant_checkin_num.csv' (FORMAT CSV, HEADER TRUE);
+COPY graph10_businessmap TO '../duckdb/db_output/graph10_businessmap.csv' (FORMAT CSV, HEADER TRUE);
  

@@ -42,9 +42,9 @@ run_spark() {
         --conf "spark.sql.shuffle.partitions=2" \
         --name "Yelp Data Processing" \
         $TRANSFORMER \
-        /home/anshadui/team17/data/yelp_academic_dataset_business.json \
-        /home/anshadui/team17/data/yelp_academic_dataset_checkin.json \
-        /home/anshadui/team17/data/yelp_academic_dataset_tip.json \
+        ../data/yelp_academic_dataset_business.json \
+        ../data/yelp_academic_dataset_checkin.json \
+        ../data/yelp_academic_dataset_tip.json \
         $OUTPUT
     check "Spark job successfully completed." "Spark job FAILED."
 }

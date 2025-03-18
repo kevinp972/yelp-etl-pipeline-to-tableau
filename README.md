@@ -72,3 +72,8 @@ p.s. `sshpass` is a tool for automating SSH password entry in scripts, allowing 
 - On CentOS/RHEL: `sudo yum install sshpass`
 - On macOS (Homebrew): `brew install hudochenkov/sshpass/sshpass`
 
+# Connecting output to Tableau dashboard
+
+The resulting Tableau dashboard can be accessed in the following link. 
+
+`https://public.tableau.com/app/profile/june.liu2832/viz/finalproject_17421027776650/Dashboard`

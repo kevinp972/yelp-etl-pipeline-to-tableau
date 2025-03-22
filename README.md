@@ -24,7 +24,7 @@ We use **DuckDB** as our lightweight, file-based OLAP (Online Analytical Process
 
 #### 4. Client Serving Layer
 
-The final processed `.csv` files are downloaded locally and imported into Tableau to build a user-facing dashboard. While our current setup does not support live AWS-to-Tableau connections due to Tableau Public restrictions, the dashboard effectively showcases the full pipeline’s output.
+The final processed `.csv` files are downloaded locally and imported into **Tableau** to build a user-facing dashboard. While our current setup does not support live AWS-to-Tableau connections due to Tableau Public restrictions, the dashboard effectively showcases the full pipeline’s output.
 
 ## Instructions to run the pipeline
 
@@ -105,3 +105,7 @@ p.s. `sshpass` is a tool for automating SSH password entry in scripts, allowing 
 The resulting Tableau dashboard can be accessed in the following link. 
 
 https://public.tableau.com/app/profile/june.liu2832/viz/finalproject_17421027776650/Dashboard
+
+## Credits
+
+**Credits:** This project was developed by Xueshan (Kevin) Peng, Siran (Sarah) Fan, Qingyuan (Jess) Yang, Ziyue (Catherine) Cao, Xinyu (Nancy) Wang, and Jun (June) Liu.

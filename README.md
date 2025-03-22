@@ -16,11 +16,11 @@ We start by downloading the open Yelp dataset in JSON format from Yelp Open Data
 
 #### 2. Data Processing Layer (Extract & Transform)
 
-This stage is handled by Apache Spark. Using `spark-job.py`, we read the raw JSON files, clean and transform the data (e.g., type casting, column construction), and write the processed output in Parquet format into the `/spark/output` directory.
+This stage is handled by **Apache Spark**. Using `spark-job.py`, we read the raw JSON files, clean and transform the data (e.g., type casting, column construction), and write the processed output in Parquet format into the `/spark/output` directory.
 
 #### 3. Data Serving Layer (Load)
 
-We use DuckDB as our lightweight, file-based data warehouse. The `duckdb-job.sql` script ingests the Parquet files, performs additional pre-aggregations and joins, and stores the results into `.csv` files within the `/duckdb/db_output` directory. This layer ensures that client applications can access pre-processed and query-optimized data.
+We use **DuckDB** as our lightweight, file-based OLAP (Online Analytical Processing) database to simulate the role of a data warehouse. The `duckdb-job.sql` script ingests the Parquet files, performs additional pre-aggregations and joins, and stores the results into `.csv` files within the `/duckdb/db_output` directory. This layer enables fast, read-optimized access to structured data, serving as a simplified alternative to industry-grade systems like **Amazon Redshift**, **Google BigQuery**, or **Snowflake** for our pipeline.
 
 #### 4. Client Serving Layer
 

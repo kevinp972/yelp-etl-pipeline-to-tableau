@@ -2,7 +2,7 @@
 
 ### Project Goal
 
-This project aims to implement a real-world data pipeline that performs a series of computational steps to take data from its raw form, store it, transform it, and ultimately serve it to a client-facing application. The end goal is to enable the execution of a single Unix command that automates the entire pipeline and produces all the data needed to power a Tableau dashboard.
+This project implements a **real-world ETL pipeline** that performs a series of computational steps to take data from its raw form, store it, transform it, and ultimately serve it to a client-facing application. The end goal is to **enable the execution of a single Unix command** that automates the entire pipeline and produces all the data needed to power a Tableau dashboard.
 
 Although we initially intended to work with a much larger dataset to simulate a true big data environment, we were limited by AWS Free Tier constraints. Similarly, we had hoped to connect Tableau directly to AWS for real-time querying, but were restricted by limitations in the Tableau Public version. Despite these trade-offs, the structure and execution of this project closely mimic real-world data workflows.
 
